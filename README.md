@@ -21,14 +21,16 @@ A Python tool to automatically identify and remove suspicious followers or bots 
 
 **1. Clone the repository:**
 ```bash
-git clone https://github.com/your-username/github_follower_cleaner.git
+git clone https://github.com/mlestrella843/github_follower_cleaner.git
 cd github_follower_cleaner
 ```
 
 **2. Install the required library:**
 ```bash
-pip install requests
+python3 -m pip install requests
 ```
+
+> ⚠️ **Note:** If you have Anaconda or multiple Python versions installed, using `python3 -m pip` ensures the library is installed in the exact same Python environment that will run the script. Avoid using just `pip install` as it may install the library in a different Python version and cause a `ModuleNotFoundError`.
 
 ---
 

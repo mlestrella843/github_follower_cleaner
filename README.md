@@ -36,21 +36,21 @@ python3 -m pip install requests
 
 ## 🔑 Setting up your GitHub Token
 
-This script requires a **Personal Access Token (Classic)** from GitHub with permissions to read and manage your followers list.
+This script requires a **Fine-grained Personal Access Token** from GitHub with permissions to read and manage your followers list.
 
 ### Where to get it?
 
 1. Go to [GitHub](https://github.com) and sign in
 2. Click on your profile picture → **Settings**
 3. In the left menu, scroll down to **Developer settings**
-4. Select **Personal access tokens** → **Tokens (classic)**
-5. Click **Generate new token (classic)**
+4. Select **Personal access tokens** → **Fine-grained tokens**
+5. Click **Generate new token**
 6. Give it a descriptive name, for example: `github-cleaner`
-7. Select the following permissions (scopes):
-   - ✅ `read:user`
-   - ✅ `user:follow`
-8. Click **Generate token**
-9. **Copy the token immediately** — GitHub will not show it to you again
+7. Set an expiration date
+8. Under **Account permissions**, enable:
+   - ✅ **Followers** → Access: Read and Write
+9. Click **Generate token**
+10. **Copy the token immediately** — GitHub will not show it to you again
 
 > ⚠️ **Important:** Copy the token directly from GitHub and paste it into the terminal without extra spaces or characters. Avoid copying it from text editors like LibreOffice, as they may add invisible characters that will invalidate the token.
 

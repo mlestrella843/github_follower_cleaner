@@ -43,7 +43,11 @@ SPAM_PHRASES = [
     "follow4follow",
     "f4f",
     "star4star",
-    "🗝️",           # emoji characteristic of these bots
+    "🗝️",
+    "Leave me ⭐ with 🌹",  # emoji characteristic of these bots
+    "Leave me \u2b50 with \U0001f339",  # variante Unicode alternativa
+    "follow me with",   # patrón de bio tipo "Follow me with 💗 redcyberhacker"
+    "redcyberhacker",   # usuario específico sospechoso
 ]
 
 # ─── GitHub Helpers ───────────────────────────────────────────────────────────
@@ -192,7 +196,7 @@ def analyze_follower(follower):
     # 3. Avatar check (only if user has a photo and API key is set)
     avatar_url = details.get("avatar_url", "")
     if avatar_url and ANTHROPIC_API_KEY:
-        is_anime, raw = is_anime_avatar(avatar_url)
+        is_anime, _ = is_anime_avatar(avatar_url)
         if is_anime:
             reasons.append("anime/cartoon avatar detected by AI")
 
